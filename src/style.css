@@ -1,1 +1,30 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+.card {
+  min-height: 70vh;
+  width: 350px;
+  margin: auto;
+}
+
+.topSuits {
+  font-size: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.numContainer {
+  margin: auto;
+  text-align: center;
+  font-size: 80px;
+}
+
+.bottomSuits {
+  text-align: right;
+  font-size: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transform: rotate(180deg);
+}
