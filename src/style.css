@@ -2,9 +2,12 @@ body {
   background-color: green;
 }
 .card {
-  min-height: 70vh;
   width: 350px;
+  min-width: 200px;
+  height: 70vh;
+  min-height: 200px;
   margin: auto;
+  flex-wrap: wrap;
 }
 
 .topSuits {
@@ -12,6 +15,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .numContainer {
@@ -27,4 +31,10 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   transform: rotate(180deg);
+  flex-wrap: wrap;
+}
+
+.form-control {
+  text-align: center;
+  font-size: 14px;
 }

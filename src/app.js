@@ -7,6 +7,34 @@ window.onload = function() {
   const numContainer = document.querySelector("#numContainer");
   const bottomSuits = document.querySelector("#bottomSuits");
   const newCardBtn = document.querySelector("#newCardBtn");
+  const cardContainer = document.querySelector("#cardContainer");
+  const inputWidth = document.querySelector("#inputWidth");
+  const inputHeight = document.querySelector("#inputHeight");
+
+  let width = "";
+  let height = "";
+
+  inputWidth.addEventListener("change", e => {
+    width = e.target.value;
+  });
+  inputHeight.addEventListener("change", e => {
+    height = e.target.value;
+  });
+  newCardBtn.addEventListener("click", () => {
+    changeProperties();
+    inputWidth.value = "";
+    inputHeight.value = "";
+  });
+
+  const changeProperties = () => {
+    cardContainer.style.width = width;
+    cardContainer.style.height = height;
+    if (width <= "300px" || height <= "300px") {
+      topSuits.style.fontSize = "25px";
+      bottomSuits.style.fontSize = "25px";
+      numContainer.style.fontSize = "35px";
+    }
+  };
 };
 
 newCardBtn.addEventListener("click", () => {
