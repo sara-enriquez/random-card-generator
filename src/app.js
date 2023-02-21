@@ -44,4 +44,7 @@ newCardBtn.addEventListener("click", () => {
     }
   };
   random();
+  setInterval(function() {
+    random();
+  }, 10000);
 });
