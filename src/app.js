@@ -20,20 +20,11 @@ window.onload = function() {
   inputHeight.addEventListener("change", e => {
     height = e.target.value;
   });
-  newCardBtn.addEventListener("click", () => {
-    changeProperties();
-    inputWidth.value = "";
-    inputHeight.value = "";
-  });
 
   const changeProperties = () => {
     cardContainer.style.width = width;
     cardContainer.style.height = height;
-    if (width == "" || height == "") {
-      topSuits.style.fontSize = "50px";
-      bottomSuits.style.fontSize = "50px";
-      numContainer.style.fontSize = "80px";
-    } else if (width >= "450px" || height >= "450px") {
+    if (width == "" || height == "" || width >= "450px" || height >= "450px") {
       topSuits.style.fontSize = "50px";
       bottomSuits.style.fontSize = "50px";
       numContainer.style.fontSize = "80px";
@@ -47,44 +38,50 @@ window.onload = function() {
       numContainer.style.fontSize = "25px";
     }
   };
-};
 
-newCardBtn.addEventListener("click", () => {
-  let numbers = [
-    "A",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "J",
-    "Q",
-    "K"
-  ];
-  let suits = ["♦", "♥", "♠", "♣"];
-  const random = () => {
-    let suitRandom = Math.floor(Math.random() * suits.length);
-    let numberRandom = Math.floor(Math.random() * numbers.length);
-    let randomSuit = suits[suitRandom];
-    let randomNumber = numbers[numberRandom];
-    topSuits.innerHTML = randomSuit;
-    numContainer.innerHTML = randomNumber;
-    bottomSuits.innerHTML = randomSuit;
+  newCardBtn.addEventListener("click", () => {
+    changeProperties();
+    inputWidth.value = "";
+    inputHeight.value = "";
+  });
 
-    if (randomSuit == suits[0] || randomSuit == suits[1]) {
-      topSuits.style.color = "red";
-      bottomSuits.style.color = "red";
-    } else {
-      topSuits.style.color = "black";
-      bottomSuits.style.color = "black";
-    }
-  };
-  random();
-  setInterval(function() {
+  newCardBtn.addEventListener("click", () => {
+    let numbers = [
+      "A",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "J",
+      "Q",
+      "K"
+    ];
+    let suits = ["♦", "♥", "♠", "♣"];
+    const random = () => {
+      let suitRandom = Math.floor(Math.random() * suits.length);
+      let numberRandom = Math.floor(Math.random() * numbers.length);
+      let randomSuit = suits[suitRandom];
+      let randomNumber = numbers[numberRandom];
+      topSuits.innerHTML = randomSuit;
+      numContainer.innerHTML = randomNumber;
+      bottomSuits.innerHTML = randomSuit;
+
+      if (randomSuit == suits[0] || randomSuit == suits[1]) {
+        topSuits.style.color = "red";
+        bottomSuits.style.color = "red";
+      } else {
+        topSuits.style.color = "black";
+        bottomSuits.style.color = "black";
+      }
+    };
     random();
-  }, 10000);
-});
+    setInterval(function() {
+      random();
+    }, 10000);
+  });
+};
