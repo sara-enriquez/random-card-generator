@@ -43,9 +43,9 @@ window.onload = function() {
       bottomSuits.style.fontSize = "15px";
       numContainer.style.fontSize = "25px";
     } else {
-      topSuits.style.fontSize = "50px";
-      bottomSuits.style.fontSize = "50px";
-      numContainer.style.fontSize = "80px";
+      topSuits.style.fontSize = "15px";
+      bottomSuits.style.fontSize = "15px";
+      numContainer.style.fontSize = "25px";
     }
   };
 };
