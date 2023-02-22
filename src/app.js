@@ -47,7 +47,7 @@ window.onload = function() {
 };
 
 newCardBtn.addEventListener("click", () => {
-  let numeros = [
+  let numbers = [
     "A",
     "2",
     "3",
@@ -62,17 +62,17 @@ newCardBtn.addEventListener("click", () => {
     "Q",
     "K"
   ];
-  let palos = ["♦", "♥", "♠", "♣"];
+  let suits = ["♦", "♥", "♠", "♣"];
   const random = () => {
-    let paloRandom = Math.floor(Math.random() * palos.length);
-    let numeroRandom = Math.floor(Math.random() * numeros.length);
-    let randomPalo = palos[paloRandom];
-    let randomNumero = numeros[numeroRandom];
-    topSuits.innerHTML = randomPalo;
-    numContainer.innerHTML = randomNumero;
-    bottomSuits.innerHTML = randomPalo;
+    let suitRandom = Math.floor(Math.random() * suits.length);
+    let numberRandom = Math.floor(Math.random() * numbers.length);
+    let randomSuit = suits[suitRandom];
+    let randomNumber = numbers[numberRandom];
+    topSuits.innerHTML = randomSuit;
+    numContainer.innerHTML = randomNumber;
+    bottomSuits.innerHTML = randomSuit;
 
-    if (randomPalo == palos[0] || randomPalo == palos[1]) {
+    if (randomSuit == suits[0] || randomSuit == suits[1]) {
       topSuits.style.color = "red";
       bottomSuits.style.color = "red";
     } else {
