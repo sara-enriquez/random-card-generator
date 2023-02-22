@@ -29,10 +29,19 @@ window.onload = function() {
   const changeProperties = () => {
     cardContainer.style.width = width;
     cardContainer.style.height = height;
-    if (width <= "300px" || height <= "300px") {
+
+    if (width >= "450px" || height >= "450px") {
+      topSuits.style.fontSize = "50px";
+      bottomSuits.style.fontSize = "50px";
+      numContainer.style.fontSize = "80px";
+    } else if (width >= "300px" || height >= "300px") {
       topSuits.style.fontSize = "25px";
       bottomSuits.style.fontSize = "25px";
       numContainer.style.fontSize = "35px";
+    } else if (width >= "200px" || height >= "200px") {
+      topSuits.style.fontSize = "15px";
+      bottomSuits.style.fontSize = "15px";
+      numContainer.style.fontSize = "25px";
     }
   };
 };

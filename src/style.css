@@ -1,6 +1,10 @@
 body {
   background-color: green;
 }
+.container {
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
 .card {
   width: 350px;
   min-width: 200px;
@@ -22,6 +26,7 @@ body {
   margin: auto;
   text-align: center;
   font-size: 80px;
+  flex-wrap: wrap;
 }
 
 .bottomSuits {
