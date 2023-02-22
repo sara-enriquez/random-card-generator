@@ -23,7 +23,6 @@ body {
 }
 
 .numContainer {
-  margin: auto;
   text-align: center;
   font-size: 80px;
   flex-wrap: wrap;
