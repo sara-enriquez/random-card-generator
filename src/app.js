@@ -43,9 +43,6 @@ window.onload = function() {
     changeProperties();
     inputWidth.value = "";
     inputHeight.value = "";
-  });
-
-  newCardBtn.addEventListener("click", () => {
     let numbers = [
       "A",
       "2",
